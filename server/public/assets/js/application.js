@@ -144,7 +144,10 @@ $(function() {
         lat: markerData.lat,
           lng: markerData.lng
       });
-      var listItem = '<li><a class="list_item" data-marker='+markerData._id+' href="#">'+markerData.username+'</a></li>';
+      var created = new Date(parseInt(markerData._id.slice(0,8), 16)*1000);
+      var min = created.getMinutes().toString();
+      min = min.length > 1 ? min : '0' + min;
+      var listItem = '<li><a class="list_item" data-marker='+markerData._id+' href="#">'+markerData.username+'</a> ' + created.toDateString() + ' at '+ created.getHours().toString() + ':' + min + '</li>';
       $('.nav.nav-list').append(listItem).on('click', function(e) {
         var id = $(e.target).data('marker');
         $.ajax({
@@ -152,8 +155,6 @@ $(function() {
           url: "/marker/" + id,
         }).done(function(markerData) {
           $('#edit-marker-layer').text(markerData.layer);
-
-          var created = new Date(parseInt(markerData._id.slice(0,8), 16)*1000);
           $('#edit-marker-username').html('<strong>' + markerData.username + '</strong> added this marker on ' + created.toString());
 
           var like_count = markerData.like_count;
