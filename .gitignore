@@ -1,2 +1,4 @@
 *.swp
 npm-debug.log
+*.rb
+server/Capfile

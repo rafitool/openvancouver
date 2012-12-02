@@ -41,6 +41,7 @@ function onMarkerClick(e) {
 
 	currentEditMarker = e.target;
 
+
 	$.ajax({
 		type: "GET",
 		url: "/marker/" + currentEditMarker._id,

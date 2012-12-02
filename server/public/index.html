@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
   <meta charset="utf-8">
   <title>openVancouver</title>
@@ -35,6 +35,16 @@
     </head>
 
     <body>
+
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=143539142457701";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 
       <div class="navbar navbar-inverse ">
         <div class="navbar-inner">
@@ -80,6 +90,8 @@
                   <a class="btn btn-small btn-success support-marker" href="#">Support this</a>  
                   <span id="like-count" class="">Edit Marker</span> 
                   <a class="close" href="#">&times;</a> 
+                  <fb:like href="http://www.openvancouver.ca" send="false" width="150" show_faces="true"></fb:like>
+                  
                 </h3>
 
                 <div class="popover-content">
@@ -129,19 +141,18 @@
                       <label class="control-label" for="markerLayer">and I wish this was a</label>
                       <div class="controls">
                         <select name="layer" id="markerLayer">
-                          <option>Rain Protected Public space</option>
-                          <option>Physical accessibility fixe</option>
-                          <option>Shortcut affirmation</option>
-                          <option>24 hour foodcart location</option>
-                          <option>Drinking water station</option>
+                          <option>Rain Protected Public Space</option>
+                          <option>Physical Accessibility Fix</option>
+                          <option>Drinking Water Station</option>
+                          <option>Shortcut Pathway Build</option>
+                          <option>Food Cart Location</option>
                           <option>Bike Rack</option>
-                          <option>Fruit tree planting</option>
-                          <option>Cross walk </option>
-                          <option>Public use Bbq and Food prep areas</option>
-                          <option>Public washrooms </option>
-                          <option>Park bench/city bench </option>
-                          <option>Compost bin loco and pickup</option>
-                          <option>other</option>
+                          <option>Boulevard Garden</option>
+                          <option>Cross Walk</option>
+                          <option>Outdoor Food Prep Area</option>
+                          <option>Public Washroom Install</option>
+                          <option>Park Bench Install</option>
+                          <option>Other</option>
                         </select>
                       </div>
                     </div>
