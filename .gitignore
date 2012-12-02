@@ -1,1 +1,5 @@
 *.swp
+
+*.rb
+
+server/Capfile
