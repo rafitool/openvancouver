@@ -130,3 +130,38 @@ $(".support-marker").click(function() {
 
 	return false;
 });
+
+$(function() {
+  // Handler for .ready() called.
+  //load markers to map
+  $.ajax({
+    type: "GET",
+    url: "/marker",
+  }).done(function(markers) {
+    $.each(markers, function(index, markerData) {
+      var marker = L.marker({
+        lat: markerData.lat,
+          lng: markerData.lng
+      });
+      var listItem = '<li><a class="list_item" data-marker='+markerData._id+' href="#">'+markerData.username+'</a></li>';
+      $('.nav.nav-list').append(listItem).on('click', function(e) {
+        var id = $(e.target).data('marker');
+        $.ajax({
+          type: "GET",
+          url: "/marker/" + id,
+        }).done(function(markerData) {
+          $('#edit-marker-layer').text(markerData.layer);
+
+          var created = new Date(parseInt(markerData._id.slice(0,8), 16)*1000);
+          $('#edit-marker-username').html('<strong>' + markerData.username + '</strong> added this marker on ' + created.toString());
+
+          var like_count = markerData.like_count;
+          $('#like-count').html('<strong>' + markerData.like_count + '</strong>');
+
+          $('#edit-marker-description').text(markerData.description);
+          $('.edit-marker-popover').show();
+        });
+      });
+    });
+  });
+});
