@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>openVancouver</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Le styles -->
+  <link href="./assets/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+  
+  .sidebar-nav {
+    padding: 9px 0;
+  }
+  </style>
+  <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="./assets/css/application.css?3" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
+      <![endif]-->
+
+      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+
+      <!-- Fav and touch icons -->
+
+    </head>
+
+    <body>
+
+      <div class="navbar navbar-inverse ">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">openVancouver</a>
+            <div class="nav-collapse collapse">
+              <!--
+              <p class="navbar-text pull-right">
+                Logged in as <a href="#" class="navbar-link">Username</a>
+              </p>
+              -->
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+
+          <div class="span9">
+
+
+            <div id="map-container">
+              <div id="map"></div>
+              <button class="add-marker btn btn-primary"   type="button">Add Marker</button>
+
+
+              <div class="edit-marker-popover popover" style="display:none;">
+                <h3 class="popover-title">
+                  <a class="btn btn-small btn-success support-marker" href="#">Support this</a>  
+                  <span id="like-count" class="">Edit Marker</span> 
+                  <a class="close" href="#">&times;</a> 
+                </h3>
+
+                <div class="popover-content">
+
+                  <h4 id="edit-marker-layer"> </h4>
+                  <p id="edit-marker-username"> </p>
+                  <br/> 
+                  <p id="edit-marker-description"> </p>
+
+
+                </div>
+              </div>
+
+
+
+              <div class="marker-popover popover" style="display:none;">
+                <h3 class="popover-title">New Marker <a class="close" href="#">&times;</a> </h3>
+
+                <div class="popover-content">
+
+                  <form class="marker-form">
+                    <div class="control-group">
+                      <label class="control-label" for="markerName">My name is</label>
+                      <div class="controls">
+                        <input  type="text" name="username" id="markerName" >
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="markerLayer">and I wish this was a</label>
+                      <div class="controls">
+                        <select name="layer" id="markerLayer">
+                          <option>Rain Protected Public space</option>
+                          <option>Physical accessibility fixe</option>
+                          <option>Shortcut affirmation</option>
+                          <option>24 hour foodcart location</option>
+                          <option>Drinking water station</option>
+                          <option>Bike Rack</option>
+                          <option>Fruit tree planting</option>
+                          <option>Cross walk </option>
+                          <option>Public use Bbq and Food prep areas</option>
+                          <option>Public washrooms </option>
+                          <option>Park bench/city bench </option>
+                          <option>Compost bin loco and pickup</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="markerDescription">Why?</label>
+                      <div class="controls">
+                        <textarea  row="4" name="description" id="markerDescription" ></textarea>
+                      </div>
+                    </div>
+                    
+                    <div class="control-group">
+                      <div class="controls">
+                        <button class="submit-marker btn btn-primary" type="submit" >Ok</button>
+                        <button class="cancel-marker btn "  >Cancel</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+
+
+
+          </div><!--/span-->
+
+          <div class="span3">
+            <div class="well sidebar-nav">
+              <ul class="nav nav-list">
+
+              </ul>
+            </div><!--/.well -->
+          </div><!--/span-->
+        </div><!--/row-->
+
+        <hr>
+
+
+        <footer>
+          <p>&copy; Transformation Projects 2012</p>
+        </footer>
+
+      </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.4/leaflet.js"></script>
+    <script src="./assets/js/application.js?4"></script>
+
+  </body>
+  </html>

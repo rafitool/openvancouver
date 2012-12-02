@@ -1,0 +1,38 @@
+#map-container {
+	position:relative;
+}
+
+#map {
+  width:100%;
+  height:100%;
+}
+
+
+.add-marker {
+  color: #fff;
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  z-index: 200;
+}
+
+.edit-marker-popover, .marker-popover {
+top: 30px;
+right: 30px;
+width:33%;
+left: auto;
+display: block;
+}
+
+
+#like-count {
+background: white;
+border: 1px solid #C1C1C1;
+height: 14px;
+line-height: 14px;
+margin-left: 6px;
+min-width: 15px;
+padding: 1px 2px;
+text-align: center;
+white-space: nowrap;
+}
