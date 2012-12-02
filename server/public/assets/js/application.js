@@ -1,9 +1,9 @@
 $(document).ready(function() {
-	$('#map').css('height', ($(window).height() - 80));
+	$('#map').css('height', ($(window).height() - 160));
 });
 
 $(window).resize(function() {
-	$('#map').css('height', ($(window).height() - 80));
+	$('#map').css('height', ($(window).height() - 160));
 }).resize();
 
 
