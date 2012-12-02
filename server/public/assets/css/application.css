@@ -16,10 +16,18 @@
   z-index: 200;
 }
 
-.edit-marker-popover, .marker-popover {
+.edit-marker-popover, .marker-popover, .splash-popover {
 top: 30px;
 right: 30px;
 width:33%;
+left: auto;
+display: block;
+}
+
+.splash-popover {
+top: 30px;
+right: 30px;
+width:66%;
 left: auto;
 display: block;
 }
