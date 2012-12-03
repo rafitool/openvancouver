@@ -9,4 +9,4 @@ Open Vancouver’s map is intended to contribute to actual city planning process
 
 contributors:
 
-hrafi rafitool@gmail.com, Naoya Makino @naoyamakino, Graham Douglas, Adrian Sinclair, Murad.
+hrafi @rafitool, Naoya Makino @naoyamakino, Graham Douglas, Adrian Sinclair, Murad.
