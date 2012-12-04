@@ -9,6 +9,7 @@
   <meta name="author" content="">
 
   <!-- Le styles -->
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href="./assets/css/bootstrap.css" rel="stylesheet">
   <style type="text/css">
   
@@ -18,7 +19,6 @@
   </style>
   <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
   <link href="./assets/css/application.css?5" rel="stylesheet">
-
 
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
     <!--[if lte IE 8]>
@@ -46,7 +46,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-      <div class="navbar navbar-inverse ">
+      <div class="navbar">
         <div class="navbar-inner">
           <div class="container-fluid">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -54,14 +54,14 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="#">openVancouver</a>
+            <a class="brand" href="#"><span>open</span>Vancouver</a>
             <div class="nav-collapse collapse">
               <!--
               <p class="navbar-text pull-right">
                 Logged in as <a href="#" class="navbar-link">Username</a>
               </p>
               -->
-              <ul class="nav">
+              <ul class="nav pull-right">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -105,11 +105,11 @@
                 </div>
               </div>
 
-
+              <!--
               <div class="splash-popover popover" style="display:block;">
                 <h3 class="popover-title">
                   
-                  <span  class="">Welcome to open vancouver</span> 
+                  <span  class="">Welcome to <strong>openVancouver</strong></span> 
                   <a class="close" href="#">&times;</a> 
                 </h3>
 
@@ -122,6 +122,7 @@
 
                 </div>
               </div>
+              -->
 
 
 
@@ -180,7 +181,12 @@
           </div><!--/span-->
 
           <div class="span3">
-            <div class="well sidebar-nav">
+          <div class="alert alert-block alert-info">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <h4>Welcome to openVancouver!</h4>
+          <p>Click on a point on the map to add a new marker, or click on an existing marker to support it.</p>
+          </div>
+            <div class="well sidebar-nav" id="sidebar">
               <ul class="nav nav-list">
 
               </ul>
@@ -192,7 +198,10 @@
 
 
         <footer>
-          <p>&copy; Transformation Projects 2012</p>
+          <p>&copy; Transformation Projects 2012 
+          	<a href="https://twitter.com/Openvancouver" target="_blank"><img class="pull-right" src="assets/img/twitter.png" /></a>
+          	<a href="https://www.facebook.com/OpenVancouver" target="_blank"><img class="pull-right" src="assets/img/facebook.png" /></a>
+          </p>
         </footer>
 
       </div><!--/.fluid-container-->
