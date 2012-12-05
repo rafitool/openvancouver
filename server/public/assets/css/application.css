@@ -32,6 +32,20 @@ left: auto;
 display: block;
 }
 
+.splash-popover .popover-title{
+  font-weight: bold;
+}
+
+.list-item {
+  border-bottom: 1px solid #C1C1C1;
+  margin-bottom: 8px;
+}
+
+
+.list-title {
+  font-weight: bold;
+}
+
 
 #like-count {
 background: white;
