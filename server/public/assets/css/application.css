@@ -25,8 +25,7 @@ display: block;
 }
 
 .splash-popover {
-top: 30px;
-right: 30px;
+margin: 0 auto;
 width:66%;
 left: auto;
 display: block;
@@ -72,4 +71,38 @@ white-space: nowrap;
 
 */
 
+.navbar .navbar-inner {
+	box-shadow: none;
+	border-radius: 0px;
+}
+
+.navbar .brand {
+	font-family: 'Montserrat', sans-serif;
+	color: #6CB33F;
+}
+
+.navbar .brand span {
+	color: #70B8DF;
+}
+
+footer img {
+	padding-left: 10px;
+}
+
+footer p {
+	font-family: 'Montserrat', sans-serif;
+	color: #666;
+}
+
+#sidebar {
+	box-shadow: none;
+}
+
+.alert h4 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.alert p {
+	padding-top: 10px;
+}
 
