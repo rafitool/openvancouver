@@ -96,6 +96,7 @@ footer p {
 
 #sidebar {
 	box-shadow: none;
+	overflow-y: scroll;
 }
 
 .alert h4 {

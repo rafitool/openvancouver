@@ -4,6 +4,7 @@ $(document).ready(function() {
 
 $(window).resize(function() {
 	$('#map').css('height', ($(window).height() - 160));
+	$('#sidebar').css('height', ($(window).height() - 340));
 }).resize();
 
 
