@@ -59,7 +59,7 @@ function addMarkerListItem(marker, markerData) {
 		min = min.length > 1 ? min : '0' + min;
 		var listItem = '<li class="list-item" id="'+ markerData._id +'"><a  class="list-title" ' + ' href="#">' + markerData.username + '</a> ' + created.toDateString() + ' at ' + created.getHours().toString() + ':' + min + '</li>';
 		
-		$('.nav.nav-list').append(listItem);
+		$('.nav.nav-list').prepend(listItem);
 
 		$('#' + markerData._id).on('click', function(e) {
 
