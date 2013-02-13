@@ -99,6 +99,8 @@ function renderMarkerInfo(markerData) {
 
 		$('#edit-marker-description').text(markerData.description);
 		$('.edit-marker-popover').show();
+
+		map.panTo(new L.LatLng(markerData.lat, markerData.lng));
 }
 
 
