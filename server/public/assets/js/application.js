@@ -57,7 +57,12 @@ function addMarkerListItem(marker, markerData) {
 	var created = new Date(parseInt(markerData._id.slice(0, 8), 16) * 1000);
 		var min = created.getMinutes().toString();
 		min = min.length > 1 ? min : '0' + min;
-		var listItem = '<li class="list-item" id="'+ markerData._id +'"><a  class="list-title" ' + ' href="#">' + markerData.username + '</a> ' + created.toDateString() + ' at ' + created.getHours().toString() + ':' + min + '</li>';
+		var listItem = '<li class="list-item" id="'+ markerData._id +'">' + 
+		'<a  class="list-title" ' + ' href="#">' + markerData.username + '</a> ' + 
+		'<div style="font-weight: bold;">' + markerData.layer + '</div> ' +
+		'<div>' + markerData.description + '</div> ' + 
+		'<div ><small>' + created.toDateString() + ' at ' + created.getHours().toString() + ':' + min + '</small></div> ' +
+		'</li>';
 		
 		$('.nav.nav-list').prepend(listItem);
 
